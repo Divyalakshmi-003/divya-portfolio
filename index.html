@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divylakshmi - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/220bbcd3ec.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/Black White Modern Handwriting Design Studio Logo.png" alt="" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Full Stack Developer</p>
+                <h1>Hi, I'm <span>Divylakshmi</span><br> from Bangalore</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- -----------about------------ -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/profile5.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>To join a leading organization which recognizes my qualification and skills, and provides
+                        adequate opportunities
+                        to learn from and progress along with the organization. To secure a challenging and rewarding
+                        role in a reputed
+                        computer science firm where I can apply my skills and knowledge to contribute to the company’s
+                        success.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Frontend Development</span><br>I create simple and responsive designs using HTML,
+                                CSS, and JS.</li>
+                            <li><span>Backend Development</span><br>I work with Java, JDBC, and Hibernate to handle
+                                business logic.</li>
+                            <li><span>Middleware Development</span><br>I use SQL and PL/SQL to manage data flow between
+                                UI and database.</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2025</span><br>Internship(E-commerrce Web Development) at Jspider</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2025</span><br>Full Stack Developer from Bangalore</li>
+                            <li><span>2021-2024</span><br>B.sc(Computer Science) from Tamilnadu</li>
+                            <li><span>2020-2021</span><br>HSC from Tamilnadu</li>
+                            <li><span>2018-2019</span><br>SSLC from Tamilnadu</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------------------services---------------------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Frontend Developer</h2>
+                    <p>
+                        I specialize in building user-friendly web interfaces using HTML, CSS, and JavaScript.
+                        I focus on creating responsive layouts that work smoothly on all devices and browsers.
+                        My goal is to deliver clean designs with interactive elements for a better user experience.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-server"></i>
+                    <h2>Backend Developer</h2>
+                    <p>
+                        I develop the server-side logic for web applications using Java, JDBC, and Hibernate.
+                        I handle tasks like user authentication, data processing, and database management.
+                        My focus is on writing efficient, reusable code and integrating backend systems seamlessly.
+                    </p>
+
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-network-wired"></i>
+                    <h2>Middleware Developer</h2>
+                    <p>
+                        As a middleware developer, I act as a bridge between frontend and backend systems.
+                        I write logic to handle data transfer, validation, and communication using Java and PL/SQL.
+                        My goal is to ensure smooth data flow and system integration for better app performance.
+                    </p>
+
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -----------------portfolio-------------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Portfolio</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-2">
+                    <div class="layer">
+                        <h3>Invoice System and Tracking</h3>
+                        <p>The invoice system is used to billing without any mistake. It reduce the cost of manual
+                            billing.Tracking is the way of invoice number,
+                            date, customer details and invoice amount used for the lorry driver reference to delivery
+                            the medicine easily.
+                        </p>
+                        <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-1">
+                    <div class="layer">
+                        <h3>E-commerce Web Application</h3>
+                        <p>The E-Commerce Application is an online platform designed to simulate a shopping experience
+                            where users can sign up, log in, browse products, filter through categories, and complete
+                            purchases via
+                            a payment gateway. This web application demonstrates a practical implementation of
+                            JavaScript, HTML,
+                            CSS, and LocalStorage for front-end and logic handling.
+                        </p>
+                        <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+    <!-- ---------------contact------------------ -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> contact@example.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i> 0123456789</p>
+                    <div class="social-icons">
+                        <a href="www.linkedin.com/in/divylakshmi03"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/dyakshi_2003/"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <a href="images/Divya GR.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form action="">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="Email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Divya Made with <i class="fa-solid fa-heart"></i> by Easy Tutorials</p>
+        </div>
+    </div>
+
+    <script>
+        let tablinks = document.getElementsByClassName('tab-links');
+        let tabcontents = document.getElementsByClassName('tab-contents');
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-links");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-links");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+
+    <script>
+      let sidemenu=document.getElementById("sidemenu");
+
+      function openmenu(){
+        sidemenu.style.right = "0";
+      }
+       
+      function closemenu(){
+        sidemenu.style.right = "-200px";
+      }
+
+    </script>
+
+</body>
+
+</html>
