@@ -163,8 +163,8 @@
             <div class="row">
                 <div class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fa-solid fa-paper-plane"></i> contact@example.com</p>
-                    <p><i class="fa-solid fa-square-phone"></i> 0123456789</p>
+                    <p><i class="fa-solid fa-paper-plane"></i> grdivyalakshmi2003@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i> 9342074728</p>
                     <div class="social-icons">
                         <a href="www.linkedin.com/in/divylakshmi03"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="https://www.instagram.com/dyakshi_2003/"><i class="fa-brands fa-instagram"></i></a>
@@ -172,12 +172,13 @@
                     <a href="images/Divya GR.pdf" download class="btn btn2">Download CV</a>
                 </div>
                 <div class="contact-right">
-                    <form action="">
+                    <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="Email" name="email" placeholder="Your Email" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
+                    <span id="msg"></span>
                 </div>
             </div>
         </div>
@@ -203,17 +204,39 @@
     </script>
 
     <script>
-      let sidemenu=document.getElementById("sidemenu");
+        let sidemenu = document.getElementById("sidemenu");
 
-      function openmenu(){
-        sidemenu.style.right = "0";
-      }
-       
-      function closemenu(){
-        sidemenu.style.right = "-200px";
-      }
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
 
     </script>
+
+   <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxne91_3OloS8nRAhZw9wEgn0j3N5vkLze1tTH-TmIJLR6fhD4swKfAkNSfL9yhBABEQw/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(response => {
+        msg.innerHTML = "Message sent successfully!"
+        setTimeout(() => msg.innerHTML = "", 5000)
+        form.reset()
+      })
+      .catch(error => {
+        msg.innerHTML = "Message failed. Please try again!"
+        console.error('Error!', error.message)
+      })
+  })
+</script>
+
 
 </body>
 
